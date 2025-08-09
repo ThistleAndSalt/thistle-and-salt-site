@@ -1,0 +1,18 @@
+{
+  "hero": [],
+  "gallery": [],
+  "galleriesByPassword": {
+    "rachel2025": {
+      "title": "Rachel \u2014 Proof Gallery",
+      "images": []
+    },
+    "kristen2025": {
+      "title": "Kristen \u2014 Proof Gallery",
+      "images": []
+    },
+    "sample123": {
+      "title": "Sample Client \u2014 Proofs",
+      "images": []
+    }
+  }
+}
