@@ -231,9 +231,9 @@ export default function App() {
                   <Button href="mailto:timspillers@yahoo.com?subject=Thistle%20%26%20Salt%20Boudoir%20Session%20Inquiry">
                     Email to Book
                   </Button>
-                  <Button href="https://thistleandsalt.com" variant="ghost">
-                    Main Website
-                  </Button>
+                 ' <Button href="https://thistleandsalt.com" variant="ghost">
+                 '   Main Website
+                '  </Button>
                   <Button
                     href="https://www.instagram.com/"
                     variant="ghost"
