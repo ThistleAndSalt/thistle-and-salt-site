@@ -22,14 +22,10 @@ const trustItems = [
 ]
 
 const portfolioStyles = [
-  'Boudoir',
-  'Couples',
-  'Maternity',
-  'Shower Sessions',
-  'Editorial',
-  'Fine Art',
-  'Black & White',
-  'Portraits',
+  { title: 'Boudoir', image: '/assets/boudoir.jpg' },
+  { title: 'Couples', image: '/assets/couples.jpg' },
+  { title: 'Maternity', image: '/assets/maternity.jpg' },
+  { title: 'Shower Sessions', image: '/assets/shower-sessions.jpg' },
 ]
 
 const sessions = [
@@ -173,8 +169,9 @@ export default function App() {
 
             <div className="portfolio-grid">
               {portfolioStyles.map((style) => (
-                <a className="tile" href="#contact" key={style}>
-                  <span>{style}</span>
+                <a className="tile" href="#contact" key={style.title}>
+                  <img src={style.image} alt={style.title} className="tile-image" />
+                  <span>{style.title}</span>
                 </a>
               ))}
             </div>
@@ -255,4 +252,19 @@ export default function App() {
       </footer>
     </>
   )
+}
+.tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 25%, rgba(8, 7, 6, 0.88));
+  z-index: 1;
+}
+
+.tile-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
