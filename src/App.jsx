@@ -23,7 +23,7 @@ const trustItems = [
 
 const portfolioStyles = [
   { title: 'Boudoir', image: '/assets/boudoir.jpg' },
-  { title: 'Couples', image: '/assets/couples.jpg' },
+  { title: 'Couples', image: '/assets/portfolio2.jpg' },
   { title: 'Maternity', image: '/assets/maternity.jpg' },
   { title: 'Shower Sessions', image: '/assets/shower-sessions.jpg' },
 ]
