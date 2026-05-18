@@ -590,12 +590,12 @@ footer .wrap {
     grid-template-columns: 1fr;
   }
 
-  .tile,
-  .tile:nth-child(2),
-  .tile:nth-child(7) {
-    min-height: 190px;
-    grid-row: auto;
-  }
+.tile:nth-child(2),
+.tile:nth-child(3),
+.tile:nth-child(4) {
+  grid-row: span 2;
+  min-height: 534px;
+}
 
   .contact-panel {
     min-height: 440px;
