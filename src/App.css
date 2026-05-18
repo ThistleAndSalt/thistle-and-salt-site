@@ -313,23 +313,22 @@ section {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
+  min-width: 0;
 }
 
 .tile {
-  min-height: 210px;
+  min-height: 260px;
   border-radius: 22px;
-  background:
-    linear-gradient(180deg, transparent, rgba(8, 7, 6, 0.86)),
-    linear-gradient(135deg, rgba(200, 164, 93, 0.2), rgba(255, 255, 255, 0.03)),
-    var(--panel-soft);
+  background: var(--panel-soft);
   border: 1px solid var(--line);
   display: flex;
   align-items: flex-end;
   padding: 20px;
   overflow: hidden;
   position: relative;
+  isolation: isolate;
   transition:
     transform 180ms ease,
     border-color 180ms ease;
@@ -340,26 +339,46 @@ section {
   border-color: rgba(200, 164, 93, 0.5);
 }
 
-.tile:nth-child(2),
-.tile:nth-child(7) {
+.tile:nth-child(2) {
   grid-row: span 2;
-  min-height: 434px;
+  min-height: 534px;
 }
 
 .tile:nth-child(3),
-.tile:nth-child(6) {
+.tile:nth-child(4) {
+  min-height: 260px;
+}
+
+.tile-image {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  display: block;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
   background:
-    linear-gradient(180deg, transparent, rgba(8, 7, 6, 0.86)),
-    linear-gradient(135deg, rgba(115, 74, 43, 0.42), rgba(255, 255, 255, 0.04)),
-    var(--panel-soft);
+    linear-gradient(180deg, transparent 35%, rgba(8, 7, 6, 0.88)),
+    linear-gradient(135deg, rgba(200, 164, 93, 0.12), transparent);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .tile span {
   position: relative;
   z-index: 2;
+  color: var(--text);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.55rem;
   line-height: 1;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85);
 }
 
 .service-list {
