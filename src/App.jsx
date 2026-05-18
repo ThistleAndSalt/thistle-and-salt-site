@@ -25,7 +25,7 @@ const portfolioStyles = [
   { title: 'Boudoir', image: '/assets/hero1.jpg' },
   { title: 'Couples', image: '/assets/portfolio2.jpg' },
   { title: 'Maternity', image: '/assets/portfolio1.jpg' },
-  { title: 'Shower Sessions', image: '/assets/portfolio3.jpg },
+  { title: 'Shower Sessions', image: '/assets/portfolio3.jpg' },
 ]
 
 const sessions = [
